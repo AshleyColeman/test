@@ -1,0 +1,60 @@
+{
+  "name": "moleculer-finany",
+  "version": "1.0.0",
+  "description": "My Moleculer-based microservices project",
+  "scripts": {
+    "dev": "moleculer-runner --env --repl --hot services/**/*.service.js",
+    "start": "moleculer-runner --env",
+    "cli": "moleculer connect NATS",
+    "ci": "jest --watch",
+    "test": "jest --coverage",
+    "lint": "eslint services",
+    "dc:up": "docker-compose up --build -d",
+    "dc:logs": "docker-compose logs -f",
+    "dc:down": "docker-compose down"
+  },
+  "keywords": [
+    "microservices",
+    "moleculer"
+  ],
+  "author": "",
+  "devDependencies": {
+    "eslint": "7.7.0",
+    "jest": "26.4.2",
+    "jest-cli": "26.4.2",
+    "moleculer-repl": "0.6.4"
+  },
+  "dependencies": {
+    "color": "^4.2.0",
+    "dotenv": "10.0.0",
+    "firebase-admin": "9.4.2",
+    "intl": "^1.2.5",
+    "jsonwebtoken": "8.5.1",
+    "lodash": "4.17.20",
+    "moleculer": "0.14.10",
+    "moleculer-db": "0.8.4",
+    "moleculer-db-adapter-mongo": "0.4.7",
+    "moleculer-db-adapter-sequelize": "0.2.10",
+    "moleculer-web": "0.9.1",
+    "moment": "^2.29.1",
+    "mysql2": "2.2.5",
+    "nats": "1.4.12",
+    "nodemailer": "^6.7.2",
+    "pg": "8.4.1",
+    "pg-hstore": "2.3.3",
+    "sequelize": "6.3.5",
+    "sequelize-cli": "6.2.0",
+    "uuid": "8.3.2"
+  },
+  "engines": {
+    "node": ">= 10.x.x"
+  },
+  "jest": {
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node",
+    "rootDir": "./services",
+    "roots": [
+      "../test"
+    ]
+  }
+}
